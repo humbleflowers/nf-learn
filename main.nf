@@ -13,7 +13,7 @@ process convertToLowerCase {
 
     script:
     """
-    cat ${inputFile} | tr '[:lower:]' '[:upper:]' > output.txt
+    cat ${inputFile} | tr '[:lower:]' '[:upper:]' | tee output.txt
     """
 }
 
