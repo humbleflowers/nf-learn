@@ -13,7 +13,7 @@ process convertToLowerCase {
 
     script:
     """
-    echo $PWD
+    cat ${inputFile} | tr '[:lower:]' '[:upper:]' | tee output.txt
     """
 }
 
